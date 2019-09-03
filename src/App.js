@@ -29,7 +29,8 @@ class App extends Component{
 
   // 箭头函数会改变指向
   hanndleChange = e => {
-    // 第二个参数：前一事件执行完成后 => 回调
+    // 第二个参数：前一事件执行完成后 => 执行/回调
+    // setState事件不会立即执行！！！
     this.setState({searchField:e.target.value},() =>
             console.log(this.state.searchField))
   }
